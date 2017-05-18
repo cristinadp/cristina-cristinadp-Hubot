@@ -1,5 +1,5 @@
  module.exports = function(robot) {
->   robot.hear(/Ming/, function(res) {
+>   robot.hear(/Cristina/, function(res) {
 >      return res.send("Hi Cristina!");
 >    });
 > };
