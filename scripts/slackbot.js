@@ -28,6 +28,10 @@ module.exports = function(robot) {
    robot.hear(/weather/i, function(msg) {
     return msg.send("Cold as usual!");
    });
+
+  robot.respond(/What's your favorite food?/, function(res) {
+  return res.send("I'm a robot--I don't eat food!");
+});
 }
 
 
