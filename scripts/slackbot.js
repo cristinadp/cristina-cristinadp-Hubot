@@ -24,6 +24,10 @@ module.exports = function(robot) {
    robot.hear(/Cristina/i, function(msg) {
    return msg.send("Hey Cristina!!!");
    });
+
+   robot.hear(/weather/i, function(msg) {
+    return msg.send("Cold as usual!");
+   });
 }
 
 
