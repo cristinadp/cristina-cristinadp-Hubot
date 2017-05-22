@@ -64,7 +64,7 @@ module.exports = function(robot) {
   return robot.hear(/Play (.*)/i, function(msg) {
     var play;
     play = msg.match[1];
-    return msg.send(msg.random(choose));
+    console.log(msg.random(choose));
     if (play === msg.random(choose)) {
       return msg.send("Tied");
     } else {
