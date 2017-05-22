@@ -18,21 +18,20 @@
 // <github username of the original script author>
 //
 
-module.exports = function(robot) {
-  //  YOUR CODE HERE
-  //  Example
-   robot.hear(/Cristina/i, function(msg) {
-   return msg.send("Hey Cristina!!!");
-   });
+// module.exports = function(robot) {
+  
+//    robot.hear(/Cristina/i, function(msg) {
+//    return msg.send("Hey Cristina!!!");
+//    });
 
-   robot.hear(/weather/i, function(msg) {
-    return msg.send("Cold as usual!");
-   });
+//    robot.hear(/weather/i, function(msg) {
+//     return msg.send("Cold as usual!");
+//    });
 
-  robot.respond(/What's your favorite food?/, function(res) {
-  return res.send("I'm a robot--I don't eat food!");
-});
-}
+//   robot.respond(/What's your favorite food?/, function(res) {
+//   return res.send("I'm a robot--I don't eat food!");
+// });
+// }
 
 
 
@@ -49,7 +48,7 @@ If you want to supplement your existing code above with any the code below,
 you need to move the contents of module.exports below into the module.exports code above. 
 */
 
-/*
+
 var squirrels;
 squirrels = ["http://img.skitch.com/20100714-d6q52xajfh4cimxr3888yb77ru.jpg", "https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png", "http://cl.ly/1i0s1r3t2s2G3P1N3t3M/Screen_Shot_2011-10-27_at_9.36.45_AM.png", "http://shipitsquirrel.github.com/images/squirrel.png"];
 
@@ -65,4 +64,3 @@ module.exports = function(robot) {
     return msg.send(msg.random(squirrels));
   });
 };
-*/
