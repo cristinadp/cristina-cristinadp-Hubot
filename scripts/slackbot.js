@@ -68,11 +68,11 @@ module.exports = function(robot) {
     play = msg.match[1];
     if (play === msg.random(choose)) {
       return msg.send("Tied");
-    } else if (play === "rock" && choose === "paper") {
+    } else if (play === "rock" && msg.random(choose) === "paper") {
       return msg.send("You lost");
-    } else if (play === "paper" && choose === "rock") {
+    } else if (play === "paper" && msg.random(choose) === "rock") {
       return msg.send("You won!");
-    } else if (play === "scissors" && choose === "rock") {
+    } else if (play === "scissors" && msg.random(choose) === "rock") {
       return msg.send("You lost");
     }
   });
