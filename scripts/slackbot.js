@@ -64,13 +64,13 @@ module.exports = function(robot) {
   return robot.hear(/Play (.*)/i, function(msg) {
     msg.send(msg.random(choose));
     
-    // var play;
-    // play = msg.match[1];
-    // if (play === msg.random(choose)) {
-    //   return msg.send("Tied");
-    // } else if () {
-    //   return msg.send("You won");
-    // }
+    var play;
+    play = msg.match[1];
+    if (play === msg.random(choose)) {
+      return msg.send("Tied");
+    } else if () {
+      return msg.send("You won");
+    }
   });
 
   // return robot.hear(/rock|paper|scissors/i, function(msg) {
