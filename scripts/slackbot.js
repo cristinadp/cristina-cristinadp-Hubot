@@ -64,7 +64,7 @@ module.exports = function(robot) {
   return robot.hear(/rock|paper|scissors/i, function(msg) {
     return msg.send(msg.random(choose));
     if ("rock" === msg.random(choose)) {
-      return("Tied");
+      return msg.send("Tied");
     } 
   });
 
