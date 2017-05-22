@@ -55,23 +55,27 @@ choose = ["rock", "paper", "scissors"];
 
 module.exports = function(robot) {
   // Basic example of respond / send. If the user enters hi or hello the bot responds "Howdy!" 
-  // return robot.respond(/hi|hello/i, function(msg) {
-  //   return msg.send("Howdy!");
-  // });
+  return robot.respond(/hi|hello/i, function(msg) {
+    return msg.send("Howdy!");
+  });
 
   // Random Example
   //If a user enters 'ship it' we return a random squirrel, which is popular for symbolizing shipping something with engineers
-  return robot.hear(/Play (.*)/i, function(msg) {
-    msg.send(msg.random(choose));
+  // return robot.hear(/Play (.*)/i, function(msg) {
+  //   msg.send(msg.random(choose));
     
-    var play;
-    play = msg.match[1];
-    if (play === msg.random(choose)) {
-      return msg.send("Tied");
-    } else if () {
-      return msg.send("You won");
-    }
-  });
+  //   var play;
+  //   play = msg.match[1];
+  //   if (play === msg.random(choose)) {
+  //     return msg.send("Tied");
+  //   } else if (play === "rock" && choose === "paper") {
+  //     return msg.send("You lost");
+  //   } else if (play === "paper" && choose === "rock") {
+  //     return msg.send("You won!");
+  //   } else if (play === "scissors" && choose === "rock") {
+  //     return msg.send("You lost");
+  //   }
+  // });
 
   // return robot.hear(/rock|paper|scissors/i, function(msg) {
   //   return msg.send(msg.random(choose));
