@@ -63,6 +63,9 @@ module.exports = function(robot) {
   //If a user enters 'ship it' we return a random squirrel, which is popular for symbolizing shipping something with engineers
   return robot.hear(/rock|paper|scissors/i, function(msg) {
     return msg.send(msg.random(choose));
+    if ("rock" === msg.random(choose)) {
+      return("Tied");
+    } 
   });
 
   // return robot.hear(/rock|paper|scissors/i, function(msg) {
