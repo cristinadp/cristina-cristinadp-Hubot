@@ -67,14 +67,18 @@ module.exports = function(robot) {
     var play;
     play = msg.match[1];
     if (play === msg.random(choose)) {
-      return msg.send("Tied");
+      msg.send("Tie");
     } else if (play === "rock" && msg.random(choose) === "paper") {
-      return msg.send("You lost");
+      msg.send("You lost");
     } else if (play === "paper" && msg.random(choose) === "rock") {
-      return msg.send("You won!");
+      msg.send("You won!");
     } else if (play === "scissors" && msg.random(choose) === "rock") {
-      return msg.send("You lost");
-    }
+      msg.send("You lost");
+    } else if (play === "rock" && msg.random(choose) === "scissors") {
+      msg.send("You won");
+    } else if (play === "paper" && msg.random(choose) === "scissors") {
+      msg.send("You lost");
+    } else ("Are you counting?");
   });
 
   // return robot.hear(/rock|paper|scissors/i, function(msg) {
