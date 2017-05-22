@@ -66,9 +66,9 @@ module.exports = function(robot) {
     play = msg.match[1];
 
     if (play === msg.random(choose)) {
-      console.log("Tied");
+      return msg.send("Tied");
     } else {
-      console.log("You won");
+      return msg.send("You won");
     }
     return msg.send(msg.random(choose));
   });
