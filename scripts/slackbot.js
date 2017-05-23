@@ -18,49 +18,15 @@
 // <github username of the original script author>
 //
 
-// module.exports = function(robot) {
-  
-//    robot.hear(/Cristina/i, function(msg) {
-//    return msg.send("Hey Cristina!!!");
-//    });
 
-//    robot.hear(/weather/i, function(msg) {
-//     return msg.send("Cold as usual!");
-//    });
-
-//   robot.respond(/What's your favorite food?/, function(res) {
-//   return res.send("I'm a robot--I don't eat food!");
-// });
-// }
-
-
-
-/************************************
-
-EXAMPLES OF THE KEY HUBOT FUNCTIONS
-
-************************************/
-
-
-/* IMPORTANT! 
-You can have only one instance of module.exports in each JavaScript file. 
-If you want to supplement your existing code above with any the code below, 
-you need to move the contents of module.exports below into the module.exports code above. 
-*/
 var choose;
 choose = ["rock", "paper", "scissors"];
 
-// var squirrels;
-// squirrels = ["http://img.skitch.com/20100714-d6q52xajfh4cimxr3888yb77ru.jpg", "https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png", "http://cl.ly/1i0s1r3t2s2G3P1N3t3M/Screen_Shot_2011-10-27_at_9.36.45_AM.png", "http://shipitsquirrel.github.com/images/squirrel.png"];
+var pictures;
+pictures = ["https://media.tenor.co/images/6e787cd3d24a79136578afbdcfc776b3/tenor.gif", "http://gifrific.com/wp-content/uploads/2012/09/Seinfeld-Laughing-with-Cigar.gif", "https://img.styla.com/resizer/sfh_500x0/5-times-audrey-hepburn-was-part-of-the-chic-clique_06553_39443.gif"];
 
 module.exports = function(robot) {
-  // Basic example of respond / send. If the user enters hi or hello the bot responds "Howdy!" 
-  // return robot.respond(/hi|hello/i, function(msg) {
-  //   return msg.send("Howdy!");
-  // });
-
-  // Random Example
-  //If a user enters 'ship it' we return a random squirrel, which is popular for symbolizing shipping something with engineers
+  
   return robot.hear(/Play (.*)/i, function(msg) {
     msg.send("I played" + " " + msg.random(choose));
     
@@ -71,31 +37,15 @@ module.exports = function(robot) {
     } else if (play === "rock" && msg.random(choose) === "paper") {
       msg.send("You lost");
     } else if (play === "paper" && msg.random(choose) === "rock") {
-      msg.send("You won!");
+      msg.send("You won! " + random(pictures));
     } else if (play === "scissors" && msg.random(choose) === "rock") {
       msg.send("You lost");
     } else if (play === "rock" && msg.random(choose) === "scissors") {
-      msg.send("You won!");
+      msg.send("You won! " + random(pictures));
     } else if (play === "paper" && msg.random(choose) === "scissors") {
       msg.send("You lost");
     } else if (play === "scissors" && msg.random(choose) === "paper") {
-      msg.send("You won!");
+      msg.send("You won! " + random(pictures));
     }
   });
-
-  // return robot.hear(/rock|paper|scissors/i, function(msg) {
-  //   return msg.send(msg.random(choose));
-  // });
-
-
-//   robot.respond(/add (.*) and (.*)/i, function(msg) {
-//   var a;
-//   var b;
-//   var c;
-//   a = parseInt(msg.match[1]);
-//   b = parseInt(msg.match[2]);
-//   c = a + b
-
-//   return msg.reply(a + " plus " + b + " = " + c);
-// });
 };
