@@ -37,15 +37,15 @@ module.exports = function(robot) {
     } else if (play === "rock" && msg.random(choose) === "paper") {
       msg.send("You lost");
     } else if (play === "paper" && msg.random(choose) === "rock") {
-      msg.send("You won! " + random(pictures));
+      msg.send("You won! " + msg.random(pictures));
     } else if (play === "scissors" && msg.random(choose) === "rock") {
       msg.send("You lost");
     } else if (play === "rock" && msg.random(choose) === "scissors") {
-      msg.send("You won! " + random(pictures));
+      msg.send("You won! " + msg.random(pictures));
     } else if (play === "paper" && msg.random(choose) === "scissors") {
       msg.send("You lost");
     } else if (play === "scissors" && msg.random(choose) === "paper") {
-      msg.send("You won! " + random(pictures));
+      msg.send("You won! " + msg.random(pictures));
     }
   });
 };
