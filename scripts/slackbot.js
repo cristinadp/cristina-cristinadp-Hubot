@@ -32,9 +32,13 @@ module.exports = function(robot) {
     
     var play;
     play = msg.match[1];
-    if (play === msg.random(choose)) {
+    if (play === "rock" && msg.random(choose) === "rock") {
       msg.send("Tie");
-    } else if (play === "rock" && msg.random(choose) === "paper") {
+    } else if (play === "paper" && msg.random(choose) === "paper") {
+      msg.send("Tie");
+    } else if (play === "scissors" && msg.random(choose) === "scissors") {
+      msg.send("Tie");
+    }else if (play === "rock" && msg.random(choose) === "paper") {
       msg.send("You lost");
     } else if (play === "paper" && msg.random(choose) === "rock") {
       msg.send("You won! " + msg.random(pictures));
