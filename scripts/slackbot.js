@@ -17,7 +17,8 @@
 // Author:
 // <github username of the original script author>
 //
-
+var coin;
+coin = ["heads", "tails"];
 
 var choose;
 choose = ["rock", "paper", "scissors"];
@@ -28,7 +29,7 @@ pictures = ["https://media.tenor.co/images/6e787cd3d24a79136578afbdcfc776b3/teno
 module.exports = function(robot) {
   
   return robot.hear(/Play (.*)/i, function(msg) {
-    msg.send("I played" + " " + msg.random(choose));
+    // msg.send("I played" + " " + msg.random(choose));
     
     var play;
     play = msg.match[1];
