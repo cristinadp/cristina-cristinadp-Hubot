@@ -27,28 +27,28 @@ pictures = ["https://media.tenor.co/images/6e787cd3d24a79136578afbdcfc776b3/teno
 module.exports = function(robot) {
   
   return robot.hear(/Play (.*)/i, function(msg) {
-    return msg.send("I played" + " " + msg.random(choose));
+    msg.send("I played" + " " + msg.random(choose));
     
     var play;
     play = msg.match[1];
     if (play === "rock" && msg.random(choose) === "rock") {
-      return msg.send("Tie");
+      msg.send("Tie");
     } else if (play === "paper" && msg.random(choose) === "paper") {
-      return msg.send("Tie");
+      msg.send("Tie");
     } else if (play === "scissors" && msg.random(choose) === "scissors") {
-      return msg.send("Tie");
+      msg.send("Tie");
     }else if (play === "rock" && msg.random(choose) === "paper") {
-      return msg.send("You lost");
+      msg.send("You lost");
     } else if (play === "paper" && msg.random(choose) === "rock") {
-      return msg.send("You won! " + msg.random(pictures));
+      msg.send("You won! " + msg.random(pictures));
     } else if (play === "scissors" && msg.random(choose) === "rock") {
-      return msg.send("You lost");
+      msg.send("You lost");
     } else if (play === "rock" && msg.random(choose) === "scissors") {
-      return msg.send("You won! " + msg.random(pictures));
+      msg.send("You won! " + msg.random(pictures));
     } else if (play === "paper" && msg.random(choose) === "scissors") {
-      return msg.send("You lost");
+      msg.send("You lost");
     } else if (play === "scissors" && msg.random(choose) === "paper") {
-      return msg.send("You won! " + msg.random(pictures));
+      msg.send("You won! " + msg.random(pictures));
     }
   });
 };
